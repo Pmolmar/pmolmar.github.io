@@ -7,6 +7,22 @@
     scroll-behavior: smooth;
   }
 
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  .dark {
+    color-scheme: dark;
+  }
+
   body {
     @apply bg-white text-slate-900 dark:bg-slate-900 dark:text-slate-100;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;

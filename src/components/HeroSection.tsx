@@ -7,7 +7,7 @@ export default function HeroSection() {
   return (
     <section className="py-10 sm:py-12">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-5xl">
+        <h1 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-5xl text-pretty">
           {t('personal.name')}
         </h1>
         <p className="mt-3 text-xl text-blue-600 dark:text-blue-400 sm:mt-4 sm:text-2xl">

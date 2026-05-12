@@ -21,7 +21,7 @@ function BulletContent({ bullet }: { bullet: Bullet }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={link.label}
-                className="inline-flex items-center gap-0.5 text-blue-600 underline decoration-blue-300 hover:text-blue-800 dark:text-blue-400 dark:decoration-blue-700 dark:hover:text-blue-300"
+                className="inline-flex items-center gap-0.5 text-blue-600 underline decoration-blue-300 hover:text-blue-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:text-blue-400 dark:decoration-blue-700 dark:hover:text-blue-300"
               >
                 {link.text}
                 <ExternalLink size={11} aria-hidden="true" />
@@ -42,7 +42,7 @@ export default function ExperienceSection() {
   return (
     <section className="py-8 sm:py-10">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 sm:text-3xl">
+        <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 sm:text-3xl text-pretty">
           {t('headings.experience')}
         </h2>
         <div className="mt-6 border-l-2 border-blue-600 pl-6 dark:border-blue-400">
@@ -50,7 +50,7 @@ export default function ExperienceSection() {
             <article key={job.title} className={i === 0 ? 'relative' : 'relative mt-6'}>
               <div className="absolute -left-[31px] top-1 h-3 w-3 rounded-full bg-blue-600 dark:bg-blue-400" />
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-                <h3 className="font-semibold text-slate-900 dark:text-slate-100">
+                <h3 className="font-semibold text-slate-900 dark:text-slate-100 text-pretty">
                   {job.title}
                 </h3>
                 <span className="text-sm text-slate-500 dark:text-slate-400">

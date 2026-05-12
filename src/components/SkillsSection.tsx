@@ -10,7 +10,7 @@ export default function SkillsSection() {
   return (
     <section className="py-8 sm:py-10">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 sm:text-3xl">
+        <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 sm:text-3xl text-pretty">
           {t('headings.skills')}
         </h2>
 
@@ -20,14 +20,14 @@ export default function SkillsSection() {
               key={cat.category}
               className="rounded-lg border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-800"
             >
-              <h3 className="font-semibold text-slate-900 dark:text-slate-100">
+<h3 className="font-semibold text-slate-900 dark:text-slate-100 text-pretty">
                 {cat.category}
               </h3>
               <div className="mt-2 flex flex-wrap gap-1.5">
                 {cat.items.map((item) => (
                   <span
                     key={item}
-                    className="rounded bg-white px-2 py-0.5 text-sm text-slate-700 dark:bg-slate-900 dark:text-slate-300"
+                    className="rounded border border-slate-200 bg-white px-2 py-0.5 text-sm text-slate-700 dark:border-slate-600 dark:bg-slate-900 dark:text-slate-300"
                   >
                     {item}
                   </span>

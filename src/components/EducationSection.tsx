@@ -9,7 +9,7 @@ export default function EducationSection() {
   return (
     <section className="py-8 sm:py-10">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 sm:text-3xl">
+        <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 sm:text-3xl text-pretty">
           {t('headings.education')}
         </h2>
         <div className="mt-6 space-y-6">
@@ -19,10 +19,10 @@ export default function EducationSection() {
               className="rounded-lg border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-800"
             >
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-                <h3 className="font-semibold text-slate-900 dark:text-slate-100">
+                <h3 className="font-semibold text-slate-900 dark:text-slate-100 text-pretty">
                   {edu.degree}
                 </h3>
-                <span className="text-sm text-slate-500 dark:text-slate-400">
+                <span className="text-sm text-slate-600 dark:text-slate-300">
                   {edu.period}
                 </span>
               </div>
@@ -38,7 +38,7 @@ export default function EducationSection() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={edu.detailsLinkLabel}
-                      className="ml-1 inline-flex items-center gap-0.5 text-blue-600 underline decoration-blue-300 hover:text-blue-800 dark:text-blue-400 dark:decoration-blue-700 dark:hover:text-blue-300"
+                      className="ml-1 inline-flex items-center gap-0.5 text-blue-600 underline decoration-blue-300 hover:text-blue-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:text-blue-400 dark:decoration-blue-700 dark:hover:text-blue-300"
                     >
                       {edu.detailsLinkLabel}
                       <ExternalLink size={11} aria-hidden="true" />

@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVM-tMnhxCfQ.woff2" crossorigin />
         <meta
             name="description"
             content="Pablo Molina Martínez — Web3 / Full Stack Engineer"
@@ -25,8 +26,12 @@
             rel="stylesheet"
         />
         <title>Pablo Molina Martínez — Portfolio</title>
+    <script>
+            (function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark')}}catch(e){}})()
+        </script>
     </head>
     <body>
+        <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:rounded focus:bg-white focus:px-4 focus:py-2 focus:text-blue-600 focus:shadow">Skip to main content</a>
         <div id="root"></div>
         <script type="module" src="/src/main.tsx"></script>
     </body>
