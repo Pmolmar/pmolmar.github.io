@@ -17,10 +17,11 @@ export default function TopBar() {
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <button
           onClick={toggleLanguage}
-          className="rounded-md px-3 py-1.5 text-sm font-medium text-slate-700 transition-colors duration-200 hover:bg-slate-100 hover:text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white"
+          className="flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium text-slate-700 transition-colors duration-200 hover:bg-slate-100 hover:text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white"
           aria-label={i18n.language === 'en' ? 'Cambiar a español' : 'Switch to English'}
         >
-          {i18n.language === 'en' ? 'ES' : 'EN'}
+          <span>{i18n.language === 'en' ? '🇬🇧' : '🇪🇸'}</span>
+          <span>{i18n.language.toUpperCase()}</span>
         </button>
 
         <div className="flex items-center gap-1">
