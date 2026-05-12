@@ -78,6 +78,8 @@ const CV_en: CVData = {
   projectsLabel: 'Projects',
   projectsDescription:
     'View all public projects on my GitHub profile.',
+  downloadCV: 'Download CV',
+  contactTagline: 'Feel free to reach out — I\'m always open to new opportunities and interesting projects.',
   headings: {
     about: 'About',
     skills: 'Skills',
@@ -85,6 +87,7 @@ const CV_en: CVData = {
     experience: 'Experience',
     education: 'Education',
     projects: 'Projects',
+    contact: 'Get in Touch',
   },
 };
 

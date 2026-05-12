@@ -41,9 +41,10 @@ function fetchRepos(): Promise<GitHubRepo[]> {
 }
 
 export default function ProjectsSection() {
-  const { t } = useTranslation('cv');
+  const { t, i18n } = useTranslation('cv');
   const [repos, setRepos] = useState<GitHubRepo[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -51,6 +52,11 @@ export default function ProjectsSection() {
     fetchRepos().then((data) => {
       if (!cancelled) {
         setRepos(data);
+        setLoading(false);
+      }
+    }).catch(() => {
+      if (!cancelled) {
+        setError(true);
         setLoading(false);
       }
     });
@@ -71,7 +77,7 @@ export default function ProjectsSection() {
   }, []);
 
   return (
-    <section className="py-8 sm:py-10">
+    <section id="projects" className="py-8 sm:py-10">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 sm:text-3xl text-pretty">
@@ -91,6 +97,18 @@ export default function ProjectsSection() {
 
         {loading ? (
           <p className="mt-6 text-sm text-slate-500 dark:text-slate-400" role="status" aria-live="polite">{t('projectsDescription')}…</p>
+        ) : error ? (
+          <p className="mt-6 text-sm text-slate-500 dark:text-slate-400" role="alert">
+            {i18n.language === 'en' ? 'Could not load projects. ' : 'No se pudieron cargar los proyectos. '}
+            <a
+              href={t('personal.github')}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
+            >
+              {t('personal.githubLabel')}
+            </a>
+          </p>
         ) : repos.length === 0 ? (
           <p className="mt-6 text-sm text-slate-500 dark:text-slate-400">{t('projectsDescription')}</p>
         ) : (

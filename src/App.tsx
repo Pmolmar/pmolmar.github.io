@@ -3,6 +3,7 @@ import TopBar from './components/TopBar';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
 import SkillsSection from './components/SkillsSection';
+import ScrollToTop from './components/ScrollToTop';
 
 const ExperienceSection = lazy(() => import('./components/ExperienceSection'));
 const EducationSection = lazy(() => import('./components/EducationSection'));
@@ -38,6 +39,7 @@ export default function App() {
       <Suspense fallback={<SectionFallback />}>
         <Footer />
       </Suspense>
+      <ScrollToTop />
     </div>
   );
 }

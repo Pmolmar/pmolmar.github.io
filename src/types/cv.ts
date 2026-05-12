@@ -48,6 +48,7 @@ export interface SectionHeadings {
   experience: string;
   education: string;
   projects: string;
+  contact: string;
 }
 
 export interface CVData {
@@ -59,5 +60,7 @@ export interface CVData {
   education: Education[];
   projectsLabel: string;
   projectsDescription: string;
+  downloadCV: string;
+  contactTagline: string;
   headings: SectionHeadings;
 }
